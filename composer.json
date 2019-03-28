@@ -2,6 +2,7 @@
     "name": "pecherskiy-v/beget-api",
     "type": "library",
     "description": "A PHP library for using Beget's API",
+    "version": "1.1.0",
     "keywords": [
         "beget-api", "beget-php-library"
     ],
@@ -44,11 +45,6 @@
         "test": "phpunit",
         "check-style": "phpcs src tests",
         "fix-style": "phpcbf src tests"
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0-dev"
-        }
     },
     "config": {
         "sort-packages": true
