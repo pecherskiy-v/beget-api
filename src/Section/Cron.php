@@ -4,13 +4,13 @@
  * Date: 2018-12-12 22:16
  */
 
-namespace Angryjack\Beget\Section;
+namespace PecherskiyV\Beget\Section;
 
-use Angryjack\Beget\Beget;
+use PecherskiyV\Beget\Beget;
 
 /**
  * Класс управления Cron
- * @package Angryjack\Beget\Section
+ * @package PecherskiyV\Beget\Section
  */
 class Cron extends Beget
 {
@@ -19,7 +19,7 @@ class Cron extends Beget
     /**
      * Метод возвращает список всех задач CronTab.
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getList()
@@ -36,7 +36,7 @@ class Cron extends Beget
      * @param $weekdays
      * @param $command
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function add($minutes, $hours, $days, $months, $weekdays, $command)
@@ -63,7 +63,7 @@ class Cron extends Beget
      * @param $weekdays
      * @param $command
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function edit($id, $minutes, $hours, $days, $months, $weekdays, $command)
@@ -85,7 +85,7 @@ class Cron extends Beget
      * Метод удалит задание с заданным ID.
      * @param $row_number - ID задания, тип int;
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function delete($row_number)
@@ -102,7 +102,7 @@ class Cron extends Beget
      * @param $row_number
      * @param $is_hidden
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function changeHiddenState($row_number, $is_hidden)
@@ -118,7 +118,7 @@ class Cron extends Beget
     /**
      * Метод возвращает email, на который приходит вывод выполненных заданий
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getEmail()
@@ -130,7 +130,7 @@ class Cron extends Beget
      * Метод устанавливает email, на который будет приходить вывод выполненных заданий.
      * @param string $email - Email или пустая строка;
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function setEmail($email = '')

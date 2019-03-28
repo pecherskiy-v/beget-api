@@ -4,13 +4,13 @@
  * Date: 2018-12-12 23:24
  */
 
-namespace Angryjack\Beget\Section;
+namespace PecherskiyV\Beget\Section;
 
-use Angryjack\Beget\Beget;
+use PecherskiyV\Beget\Beget;
 
 /**
  * Класс управления Mysql
- * @package Angryjack\Beget\Section
+ * @package PecherskiyV\Beget\Section
  */
 class Mysql extends Beget
 {
@@ -19,7 +19,7 @@ class Mysql extends Beget
     /**
      * Метод возвращает список баз данных MySQL с их доступами.
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getList()
@@ -34,7 +34,7 @@ class Mysql extends Beget
      * что итоговый логин вида "login_suffix" должен быть не длиннее 16 символов.;
      * @param $password - пароль для новой базы данных. Должен содержать не менее 6 символов;
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function addDb($suffix, $password)
@@ -62,7 +62,7 @@ class Mysql extends Beget
      * @param $access - имя доступа - это может быть: домен, IP, * или localhost;
      * @param $password - пароль для нового доступа к базе данных. Должен содержать не менее 6 символов;
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function addAccess($suffix, $access, $password)
@@ -88,7 +88,7 @@ class Mysql extends Beget
      * Метод удаляет заданную базу данных и все доступы к ней.
      * @param $suffix - суффиксная часть имени базы данных.
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function dropDb($suffix)
@@ -105,7 +105,7 @@ class Mysql extends Beget
      * @param $suffix - суффиксная часть имени базы данных;
      * @param $access - имя доступа - это может быть: домен, IP, * или localhost;
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function dropAccess($suffix, $access)
@@ -124,7 +124,7 @@ class Mysql extends Beget
      * @param $access - имя доступа - это может быть: домен, IP, * или localhost;
      * @param $password - пароль для нового доступа к базе данных. Должен содержать не менее 6 символов;
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function changeAccessPassword($suffix, $access, $password)

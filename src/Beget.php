@@ -4,14 +4,14 @@
  * Date: 2018-12-03 21:53
  */
 
-namespace Angryjack\Beget;
+namespace PecherskiyV\Beget;
 
-use Angryjack\Beget\Exception\BegetException;
+use PecherskiyV\Beget\Exception\BegetException;
 use GuzzleHttp\Client;
 
 /**
  * Класс для работы с API бегета
- * @package Angryjack\Beget
+ * @package PecherskiyV\Beget
  */
 class Beget
 {
@@ -115,7 +115,8 @@ class Beget
 
         $paramsLine = '?login=' . $this->login .
             '&passwd=' . $this->password .
-            '&input_format=' . $inputFormat;
+            '&input_format=' . $inputFormat .
+            '&output_format=' . $this->outputFormat;
 
         if ($inputFormat === 'plain') {
             foreach ($params as $key => $value) {
@@ -123,13 +124,10 @@ class Beget
             }
         } elseif ($inputFormat === 'json') {
             $paramsLine .= '&input_data=';
-            $paramsLine .= urlencode(json_encode($params));
+            $paramsLine .= json_encode($params);
         } else {
             throw new BegetException('Передан неподдерживаемый формат.');
         }
-
-        $paramsLine .= '&output_format=' . $this->outputFormat;
-
         return $url . $paramsLine;
     }
 }

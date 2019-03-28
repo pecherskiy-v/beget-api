@@ -4,14 +4,14 @@
  * Date: 2018-12-13 23:11
  */
 
-namespace Angryjack\Beget\Section;
+namespace PecherskiyV\Beget\Section;
 
-use Angryjack\Beget\Beget;
-use Angryjack\Beget\Exception\BegetException;
+use PecherskiyV\Beget\Beget;
+use PecherskiyV\Beget\Exception\BegetException;
 
 /**
  * Класс для работы с почтой
- * @package Angryjack\Beget\Section
+ * @package PecherskiyV\Beget\Section
  */
 class Mail extends Beget
 {
@@ -21,7 +21,7 @@ class Mail extends Beget
      * Метод возвращает все почтовые ящики на заданном домене.
      * @param $domain - домен, почтовые ящики которого будут отображены (например, site.ru);
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getMailboxList($domain)
@@ -39,7 +39,7 @@ class Mail extends Beget
      * @param $mailbox - имя почтового ящика (например, info);
      * @param $mailbox_password - пароль для почтового ящика.
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function changeMailboxPassword($domain, $mailbox, $mailbox_password)
@@ -59,7 +59,7 @@ class Mail extends Beget
      * @param $mailbox - имя почтового ящика (например, info);
      * @param $mailbox_password - пароль для почтового ящика.
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function createMailbox($domain, $mailbox, $mailbox_password)
@@ -78,7 +78,7 @@ class Mail extends Beget
      * @param $domain - домен, на котором находится почтовый ящик (например, site.ru);
      * @param $mailbox - имя почтового ящика (например, info).
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function dropMailbox($domain, $mailbox)

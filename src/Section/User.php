@@ -4,13 +4,13 @@
  * Date: 2018-12-04 22:57
  */
 
-namespace Angryjack\Beget\Section;
+namespace PecherskiyV\Beget\Section;
 
-use Angryjack\Beget\Beget;
+use PecherskiyV\Beget\Beget;
 
 /**
  * Класс управления аккаунтом
- * @package Angryjack\Beget
+ * @package PecherskiyV\Beget
  */
 class User extends Beget
 {
@@ -21,7 +21,7 @@ class User extends Beget
      * о некоторых параметрах сервера, на котором пользователь размещается в данный момент,
      * и используемых лимитах на нем.
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getAccountInfo()
@@ -37,7 +37,7 @@ class User extends Beget
      * @param string $ftplogin - login ftp аккаунта, если передан, включает\отключает доступ к ftp аккаунту по SSH
      * если не передан включает\отключает доступ по SSH к основному аккаунту пользователя;
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function toggleSsh($status, $ftplogin = '')

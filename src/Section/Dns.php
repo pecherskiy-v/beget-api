@@ -4,13 +4,13 @@
  * Date: 2018-12-12 22:51
  */
 
-namespace Angryjack\Beget\Section;
+namespace PecherskiyV\Beget\Section;
 
-use Angryjack\Beget\Beget;
+use PecherskiyV\Beget\Beget;
 
 /**
  * Класс управления DNS
- * @package Angryjack\Beget\Section
+ * @package PecherskiyV\Beget\Section
  */
 class Dns extends Beget
 {
@@ -20,7 +20,7 @@ class Dns extends Beget
      * Метод возвращает информацию с DNS-сервера о домене.
      * @param $fqdn - полное имя домена (домены на национальных языках следует передавать в punycode).
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getData($fqdn)
@@ -38,7 +38,7 @@ class Dns extends Beget
      * @param $records - массив, содержащий DNS записи.
      * // https://www.beget.com/ru/api/dns#changeRecords
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function changeRecords($fqdn, $records)

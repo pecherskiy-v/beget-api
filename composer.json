@@ -1,17 +1,23 @@
 {
-    "name": "angryjack/beget-api",
+    "name": "pecherskiy-v/beget-api",
     "type": "library",
     "description": "A PHP library for using Beget's API",
     "keywords": [
-        "angryjack", "beget-api", "beget-php-library"
+        "beget-api", "beget-php-library"
     ],
-    "homepage": "https://github.com/angryjack/beget-api",
+    "homepage": "https://github.com/pecherskiy-v/beget-api",
     "license": "MIT",
     "authors": [
         {
             "name": "angryjack",
             "email": "angryj2ck@gmail.com",
             "homepage": "https://github.com/angryjack",
+            "role": "Developer"
+        },
+        {
+            "name": "Pecherskiy Valeriy",
+            "email": "pecherskiy.v@gmail.com",
+            "homepage": "https://github.com/pecherskiy-v/",
             "role": "Developer"
         }
     ],
@@ -26,12 +32,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Angryjack\\Beget\\": "src"
+            "PecherskiyV\\Beget\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Angryjack\\Beget\\Test\\": "tests"
+            "PecherskiyV\\Beget\\Test\\": "tests"
         }
     },
     "scripts": {

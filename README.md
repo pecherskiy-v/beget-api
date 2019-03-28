@@ -1,3 +1,5 @@
+forked from angryjack/beget-api
+
 # beget-api
 Библиотека представляет собой обертку для удобного использования [Beget.API.](https://www.beget.com/ru/api)
 
@@ -7,14 +9,14 @@
 Через Composer
 
 ``` bash
-$ composer require angryjack/beget-api
+$ composer require pecherskiy-v/beget-api
 ```
 
 ## Использование
 
 ### Инициализация
 ``` php
-use Angryjack\Beget\Beget;
+use PecherskiyV\Beget\Beget;
 
 $beget = new Beget('login', 'password');
 ```

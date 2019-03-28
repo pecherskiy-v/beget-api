@@ -4,13 +4,13 @@
  * Date: 10.12.18 : 13:39
  */
 
-namespace Angryjack\Beget\Section;
+namespace PecherskiyV\Beget\Section;
 
-use Angryjack\Beget\Beget;
+use PecherskiyV\Beget\Beget;
 
 /**
  * Класс управления бекапами
- * @package Angryjack\Beget\Section
+ * @package PecherskiyV\Beget\Section
  */
 class Backup extends Beget
 {
@@ -19,7 +19,7 @@ class Backup extends Beget
     /**
      * Метод возвращает доступный список резервных файловых копий.
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getFileBackupList()
@@ -30,7 +30,7 @@ class Backup extends Beget
     /**
      * Метод возвращает доступный список резервных копий баз mysql
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getMysqlBackupList()
@@ -44,7 +44,7 @@ class Backup extends Beget
      * @param $backup_id - идентификатор резервной копии backup_id,
      * если не задан - значит листинг идет по текущей копии;
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getFileList($path, $backup_id = '')
@@ -65,7 +65,7 @@ class Backup extends Beget
      * @param $backup_id - идентификатор резервной копии backup_id,
      * если не задан - значит листинг идет по текущей копии;
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getMysqlList($backup_id = '')
@@ -84,7 +84,7 @@ class Backup extends Beget
      * (например "/site.ru/public_html");
      * @param $backup_id - идентификатор резервной копии backup_id
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function restoreFile(array $paths, $backup_id)
@@ -103,7 +103,7 @@ class Backup extends Beget
      * @param array $bases - массив (одно или несколько значений) имена баз данных MySQL для восстановления
      * @param $backup_id - идентификатор резервной копии backup_id
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function restoreMysql(array $bases, $backup_id)
@@ -123,7 +123,7 @@ class Backup extends Beget
      * @param $backup_id  - идентификатор резервной копии backup_id (необязательный),
      * если не указан то используется текущая копия
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function downloadFile(array $paths, $backup_id = '')
@@ -142,7 +142,7 @@ class Backup extends Beget
      * @param $backup_id - идентификатор резервной копии backup_id (необязательный),
      * если не указан то используется текущая копия
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function downloadMysql(array $bases, $backup_id = '')
@@ -158,7 +158,7 @@ class Backup extends Beget
     /**
      * Метод возвращает список и статусы заданий по восстановлению и загрузке
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getLog()

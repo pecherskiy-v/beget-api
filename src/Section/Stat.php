@@ -4,22 +4,22 @@
  * Date: 2018-12-13 23:56
  */
 
-namespace Angryjack\Beget\Section;
+namespace PecherskiyV\Beget\Section;
 
-use Angryjack\Beget\Beget;
+use PecherskiyV\Beget\Beget;
 
 /**
  * Класс для сбора статистики
- * @package Angryjack\Beget\Section
+ * @package PecherskiyV\Beget\Section
  */
 class Stat extends Beget
 {
-    public $section = 'mail/';
+    public $section = 'stat/';
 
     /**
      * Метод возвращает информацию о средней нагрузке на сайтах пользователя за последний месяц
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getSiteListLoad()
@@ -30,7 +30,7 @@ class Stat extends Beget
     /**
      * Метод возвращает информацию о средней нагрузке на базах данных пользователя за последний месяц
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getDbListLoad()
@@ -42,7 +42,7 @@ class Stat extends Beget
      * Метод возвращает детальную информацию о нагрузке на указаном сайте (нагрузка по дням и часам)
      * @param $site_id - идентификатор сайта;
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getSiteLoad($site_id)
@@ -58,7 +58,7 @@ class Stat extends Beget
      * Метод возвращает детальную информацию о нагрузке на указанной базе MySQL
      * @param $db_name - имя базы данных;
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getDbLoad($db_name)

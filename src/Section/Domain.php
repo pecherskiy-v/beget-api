@@ -4,22 +4,22 @@
  * Date: 2018-12-13 22:45
  */
 
-namespace Angryjack\Beget\Section;
+namespace PecherskiyV\Beget\Section;
 
-use Angryjack\Beget\Beget;
+use PecherskiyV\Beget\Beget;
 
 /**
  * Класс для работы с доменами
- * @package Angryjack\Beget\Section
+ * @package PecherskiyV\Beget\Section
  */
 class Domain extends Beget
 {
-    public $section = 'mysql/';
+    public $section = 'domain/';
 
     /**
      * Метод возвращает список доменов на аккаунте пользователя.
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getList()
@@ -30,7 +30,7 @@ class Domain extends Beget
     /**
      * Метод возвращает список зон.
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getZoneList()
@@ -43,7 +43,7 @@ class Domain extends Beget
      * @param $hostname - доменное имя, без зоны (например, domain);
      * @param $zone_id  - id зоны, тип int;
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function addVirtual($hostname, $zone_id)
@@ -61,7 +61,7 @@ class Domain extends Beget
      * Также будут удалены все поддомены этого домена.
      * @param $id - id домена;
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function delete($id)
@@ -76,7 +76,7 @@ class Domain extends Beget
     /**
      * Метод возвращает список поддоменов.
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getSubdomainList()
@@ -89,7 +89,7 @@ class Domain extends Beget
      * @param $subdomain - имя поддомена;
      * @param $domain_id - id родительского домена;
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function addSubdomainVirtual($subdomain, $domain_id)
@@ -106,7 +106,7 @@ class Domain extends Beget
      * Метод удаляет заданный поддомен.
      * @param $id - id поддомена.
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function deleteSubdomain($id)
@@ -124,7 +124,7 @@ class Domain extends Beget
      * @param $zone_id - id зоны, получить список зон можно с помощью метода getZoneList;
      * @param $period - период регистрации (в годах), тип int.
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function checkDomainToRegister($hostname, $zone_id, $period)
@@ -141,7 +141,7 @@ class Domain extends Beget
     /**
      * Метод возвращает список сохраненных персон, доступных для регистрации доменов.
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getDomainPersons()
@@ -161,7 +161,7 @@ class Domain extends Beget
      * @param $pp - активировать ли услугу скрытия персональных данных (обязательна в зонах .ru / .su / .рф) (0/1);
      * @param $enable_auto_renew - включить услугу автоматического продления домена (0/1).
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function registerVirtual(
@@ -195,7 +195,7 @@ class Domain extends Beget
      * @param $id - id домена;
      * @param $period - желаемый период продления.
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getRenewInfo($id, $period)
@@ -214,7 +214,7 @@ class Domain extends Beget
      * @param $pay_type - способ оплаты;
      * @param $period - желаемый период продления.
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function renew($id, $pay_type, $period)
@@ -233,7 +233,7 @@ class Domain extends Beget
      * доступных для установки версиях php
      * @param $full_fqdn - полное имя домена, для которого необходимо получить информацию;
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getPhpVersion($full_fqdn)
@@ -241,6 +241,29 @@ class Domain extends Beget
         $params = array(
             'full_fqdn' => $full_fqdn
         );
+
+        return $this->request($this->section, __FUNCTION__, $params);
+    }
+
+    /**
+     * Метод изменяет версию php на переданную. Позволяет установить и снять режим cgi
+     * @param $full_fqdn - полное имя домена, для которого необходимо изменить версию php;
+     * @param $php_version - версия php, на которую будет произведено изменение;
+     * @param $is_cgi - установить или снять режим cgi. По умолчанию имеет значение false;
+     * @return \Psr\Http\Message\StreamInterface
+     * @throws \PecherskiyV\Beget\Exception\BegetException
+     * @throws \GuzzleHttp\Exception\GuzzleException
+     */
+    public function changePhpVersion($full_fqdn, $php_version, $is_cgi = null)
+    {
+        $params = array(
+            'full_fqdn' => $full_fqdn,
+            'php_version' => $php_version
+        );
+
+        if (isset($is_cgi)) {
+            $params['is_cgi'] = $is_cgi;
+        }
 
         return $this->request($this->section, __FUNCTION__, $params);
     }

@@ -4,14 +4,14 @@
  * Date: 2018-12-12 23:01
  */
 
-namespace Angryjack\Beget\Section;
+namespace PecherskiyV\Beget\Section;
 
-use Angryjack\Beget\Beget;
-use Angryjack\Beget\Exception\BegetException;
+use PecherskiyV\Beget\Beget;
+use PecherskiyV\Beget\Exception\BegetException;
 
 /**
  * Класс управления FTP
- * @package Angryjack\Beget\Section
+ * @package PecherskiyV\Beget\Section
  */
 class Ftp extends Beget
 {
@@ -20,7 +20,7 @@ class Ftp extends Beget
     /**
      * Метод возвращает список дополнительных FTP-аккаунтов с их домашними директориями.
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getList()
@@ -36,7 +36,7 @@ class Ftp extends Beget
      * (например, /site.ru/public_html);
      * @param $password - - пароль для нового ftp-аккаунта;
      * @return \Psr\Http\Message\StreamInterface
-     * @throws \Angryjack\Beget\Exception\BegetException
+     * @throws \PecherskiyV\Beget\Exception\BegetException
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function add($suffix, $homedir, $password)
